@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const links = [
   { label: 'TELEGRAM', href: '#', desc: 'Primary comms' },
-  { label: 'TWITTER', href: '#', desc: 'Intel feed' },
+  { label: 'TWITTER', href: 'https://x.com/SleeperAgentDev', desc: 'Intel feed' },
   { label: 'DEXSCREENER', href: '#', desc: 'Live data' },
 ]
 
