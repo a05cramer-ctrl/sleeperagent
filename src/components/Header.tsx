@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
+import { LINKS } from '@/lib/constants'
 
 const navLinks = [
   { href: '#mission', label: 'MISSION' },
@@ -28,7 +29,7 @@ export function Header() {
         </div>
         <nav className="hidden md:flex items-center gap-8">
           <a
-            href="https://x.com/SleeperAgentDev"
+            href={LINKS.twitter}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-accent-blue hover:text-accent-blue/80 transition-colors font-mono font-semibold"
@@ -36,7 +37,7 @@ export function Header() {
             TWITTER
           </a>
           <a
-            href="https://dexscreener.com"
+            href={LINKS.dexscreener}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-accent-blue hover:text-accent-blue/80 transition-colors font-mono font-semibold"
@@ -66,10 +67,10 @@ export function Header() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t border-navy-700/50 mt-4 pt-4 flex flex-col gap-4"
           >
-            <a href="https://x.com/SleeperAgentDev" target="_blank" rel="noopener noreferrer" className="text-sm text-accent-blue font-mono font-semibold py-2">
+            <a href={LINKS.twitter} target="_blank" rel="noopener noreferrer" className="text-sm text-accent-blue font-mono font-semibold py-2">
               TWITTER
             </a>
-            <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer" className="text-sm text-accent-blue font-mono font-semibold py-2">
+            <a href={LINKS.dexscreener} target="_blank" rel="noopener noreferrer" className="text-sm text-accent-blue font-mono font-semibold py-2">
               CHART
             </a>
             {navLinks.map((link) => (

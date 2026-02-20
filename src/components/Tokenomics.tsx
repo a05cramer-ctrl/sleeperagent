@@ -1,12 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { CONTRACT_ADDRESS, LINKS } from '@/lib/constants'
 
 const data = [
   { label: 'Total Supply', value: '1,000,000,000', unit: '$SLPR' },
   { label: 'Liquidity', value: 'Locked', status: 'PERMANENT' },
   { label: 'Tax', value: '0%', sub: 'Buy & Sell' },
-  { label: 'Contract', value: 'Renounced', status: 'IMMUTABLE' },
+  { label: 'Contract', value: 'Renounced', status: 'IMMUTABLE', ca: CONTRACT_ADDRESS },
 ]
 
 export function Tokenomics() {
@@ -46,6 +47,16 @@ export function Tokenomics() {
                 )}
                 {item.sub && (
                   <p className="font-mono text-xs text-white/40 mt-1">{item.sub}</p>
+                )}
+                {item.ca && (
+                  <a
+                    href={LINKS.dexscreener}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-xs text-accent-blue/80 mt-2 block truncate hover:text-accent-blue break-all"
+                  >
+                    {item.ca}
+                  </a>
                 )}
               </motion.div>
             ))}

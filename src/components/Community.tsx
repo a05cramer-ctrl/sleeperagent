@@ -1,11 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { LINKS } from '@/lib/constants'
 
 const links = [
   { label: 'TELEGRAM', href: '#', desc: 'Primary comms' },
-  { label: 'TWITTER', href: 'https://x.com/SleeperAgentDev', desc: 'Intel feed' },
-  { label: 'DEXSCREENER', href: '#', desc: 'Live data' },
+  { label: 'TWITTER', href: LINKS.twitter, desc: 'Intel feed' },
+  { label: 'DEXSCREENER', href: LINKS.dexscreener, desc: 'Live data' },
 ]
 
 export function Community() {

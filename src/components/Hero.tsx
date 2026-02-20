@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { LINKS } from '@/lib/constants'
 
 export function Hero() {
   return (
@@ -65,7 +66,9 @@ export function Hero() {
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="#"
+              href={LINKS.pump}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 bg-accent-blue text-white font-mono text-sm tracking-wider hover:bg-accent-blue/90 transition-all border border-accent-blue/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]"
             >
               ACTIVATE $SLPR
@@ -79,7 +82,7 @@ export function Hero() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://x.com/SleeperAgentDev"
+              href={LINKS.twitter}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-accent-blue text-white font-mono text-sm tracking-wider hover:bg-accent-blue/90 transition-all border border-accent-blue/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]"
@@ -87,7 +90,7 @@ export function Hero() {
               TWITTER
             </a>
             <a
-              href="https://dexscreener.com"
+              href={LINKS.dexscreener}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 border border-white/30 text-white font-mono text-sm tracking-wider hover:bg-white/5 hover:border-white/50 transition-all"
